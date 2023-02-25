@@ -1,11 +1,11 @@
-﻿export type ButtonAttribute = {
-    label: string,
-    
-    description: string | undefined,
-    
-    icon: string | undefined
-    
-    type: 'default' | 'ghost',
-    
-    primary: boolean
+export interface ButtonAttribute {
+  label: string
+
+  description: string | undefined
+
+  icon: string | undefined
+
+  type: 'default' | 'ghost'
+
+  primary: boolean
 }

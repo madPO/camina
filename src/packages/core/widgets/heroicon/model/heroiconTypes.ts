@@ -1,5 +1,5 @@
-﻿export type heroiconAttribute = {
-    name: string
-    
-    type: "solid" | "outline" | "mini"
+export interface heroiconAttribute {
+  name: string
+
+  type: 'solid' | 'outline' | 'mini'
 }
