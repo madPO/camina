@@ -1,4 +1,4 @@
-﻿export function defineWebComponent<TElement extends HTMLElement>(tagName: string, setup: WebComponentSetupFunction) {
+﻿export function defineWebComponent<TElement extends HTMLElement>(tagName: string, setup: WebComponentSetupFunction, extend?: string) {
     const attributes: object = {};
 
     const defineAttributes: (config: object) => void = (props) => {
@@ -26,27 +26,16 @@
     customElements.define(tagName, class extends HTMLElement {
 
         constructor() {
+            super();
+            
             for (let key in attributes) {
                 this[key] = attributes[key];
             }
-
-            super();
         }
 
         connectedCallback() {
             const root = this.attachShadow({mode: 'open'});
-            const child = renderHook(this.attributes);
-
-            if(!child){
-                return;
-            }
-            
-            if(Array.isArray(child)){
-                child.forEach(x => !!x && root.appendChild(x));            
-            }
-            else {
-                root.appendChild(child);
-            }
+            this._render(root);
             
             connectedHook();
         }
@@ -65,10 +54,25 @@
 
         attributeChangedCallback(name: string, oldValue: string, newValue: string) {
             //  todo: тут скорее всего нужен будет дебоунс
-            const root: ShadowRoot = this.shadowRoot!;
-            root.replaceChildren();
-            const child = renderHook(this.attributes);
+            const root: ShadowRoot | null = this.shadowRoot;
             
+            this._render(root);
+        }
+        
+        private _render(root: ShadowRoot | null){
+            if(!root){
+                return;
+            }
+
+            root.replaceChildren();
+            const props = {};
+            for (let i = 0; i < this.attributes.length; i++) {
+                const attribute =  this.attributes[i];
+                props[attribute.name] = attribute.value;                
+            }
+            
+            const child = renderHook(props);
+
             if(!child){
                 return;
             }
@@ -78,7 +82,7 @@
             }
             else {
                 root.appendChild(child);
-            }
+            }            
         }
     });
 }
