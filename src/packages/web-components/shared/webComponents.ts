@@ -1,3 +1,5 @@
+import type { JSX } from 'jsx-dom'
+
 export function defineWebComponent (tagName: string, setup: WebComponentSetupFunction, extend?: string): void {
   const attributes: object = {}
 
@@ -17,8 +19,8 @@ export function defineWebComponent (tagName: string, setup: WebComponentSetupFun
     disconnectedHook = handler
   }
 
-  let renderHook: (props: object | undefined) => HTMLElement | HTMLElement[] | null = () => null
-  const onRender: (handler: (props: object | undefined) => HTMLElement | HTMLElement[] | null) => void = (handler) => {
+  let renderHook: (props: any) => JSX.Element | null = () => null
+  const onRender: (handler: (props: any) => JSX.Element) => void = (handler) => {
     renderHook = handler
   }
 
@@ -89,6 +91,6 @@ export type WebComponentSetupFunction = (configure: {
   defineAttributes: (config: object) => void
   onConnected: (handler: () => void | Promise<void>) => void
   onDisconnected: (handler: () => void | Promise<void>) => void
-  onRender: (handler: (props: object | undefined) => HTMLElement | HTMLElement[] | null) => void
+  onRender: (handler: (props: any) => JSX.Element) => void
 }
 ) => void

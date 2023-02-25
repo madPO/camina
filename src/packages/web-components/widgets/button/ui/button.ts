@@ -1,8 +1,7 @@
 import { defineWebComponent } from '../../../shared/webComponents'
-import { Button } from '@camina/core/widgets/button/ui/button'
-import { defineButtonAttributes } from '@camina/core/widgets/button/api/buttonInterface'
+import { Button, defineButtonAttributes } from '@camina/core'
 
-defineWebComponent<HTMLElement>('camina-button', function ({ defineAttributes, onRender }) {
+defineWebComponent('camina-button', function ({ defineAttributes, onRender }) {
   defineAttributes(defineButtonAttributes())
 
   onRender(Button)
