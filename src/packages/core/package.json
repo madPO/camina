@@ -2,13 +2,44 @@
 	"name": "@camina/core",
 	"version": "0.0.1",
 	"description": "",
-	"main": "bin/index.js",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/@camina-core.umd.js",
+	"module": "./dist/@camina-core.es.js",
+	"types": "./dist/@camina-core.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/@camina-core.es.js",
+			"require": "./dist/@camina-core.umd.js"
+		}
+	},
+	"ts-standard": {
+		"ignore": [
+			"dist",
+			"node_modules",
+			"shared/heroicon/*.svg"
+		]
+	},
 	"scripts": {
-		"compile": "tsc -b",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"eslint": "eslint src/**/**.{ts,tsx}",
-		"eslint:fix": "eslint src/**/**.{ts,tsx} --fix"
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "ts-standard",
+		"compile-icon-bundle": "ts-node icon-bundle-generate.ts"
 	},
 	"author": "",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@types/glob": "^8.0.1",
+		"autoprefixer": "^10.4.13",
+		"cssnano": "^5.1.15",
+		"glob": "^8.1.0",
+		"ts-standard": "^12.0.2",
+		"vite-plugin-dts": "^2.0.2"
+	},
+	"dependencies": {
+		"jsx-dom": "^8.0.5"
+	}
 }
