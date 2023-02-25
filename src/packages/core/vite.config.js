@@ -4,7 +4,8 @@ import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [dts({
-    insertTypesEntry: true
+    insertTypesEntry: true,
+    exclude: ['dist']
   })],
   build: {
     lib: {
@@ -16,6 +17,6 @@ export default defineConfig({
   },
   esbuild: {
     jsx: 'transform',
-    jsxInject: 'import React from "jsx-dom";'
+    jsxInject: 'import React from "jsx-dom"'
   }
 })

@@ -3,7 +3,7 @@ import type { ButtonAttribute } from '../model/buttonTypes'
 // todo: может быть вынести в отдельные файлы, а потом уже подключать
 import style from './button.css?raw'
 import { Heroicon } from '../../heroicon/ui/heroicon'
-import React, { JSX } from 'jsx-dom'
+import type { JSX } from 'jsx-dom'
 
 export function Button (props: ButtonAttribute): JSX.Element {
   const { icon, label, description, primary } = props
