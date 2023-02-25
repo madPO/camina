@@ -1,0 +1,47 @@
+﻿---                          
+import '../styles/global.css';
+import PageNavigationItem from './PageNavigationItem.astro';
+
+const pages = [
+    { title: 'Начало работы', link: '/docs'},
+    { title: 'Компоненты', pages: [
+           { title: 'Кнопка', link: '/docs/components/button.html'}, 
+        ]
+    },
+];
+const { title } = Astro.props;
+---
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>camina | {title}</title>
+		<style>
+            .camina-page{
+                background-color: var(--dark-default);
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .camina-navigation {
+                width: 25vw;
+                padding: 2em;
+            }
+            
+            .camina-content {
+                width: 100%;
+                background-color: var(--dark-lighter);
+            }
+		</style>
+	</head>
+	<body class="camina-page">
+	    <nav class="camina-navigation">
+	        <ul style="list-style: none;">{pages.map(p => <PageNavigationItem page={p} />)}</ul>
+	    </nav>
+	    <div class="camina-content">
+	        <slot />
+	    </div>	  
+	</body>
+</html>

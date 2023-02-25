@@ -13,6 +13,11 @@
 		"astro": "^2.0.8",
 		"@camina/web-components": "*"
 	},
+	"devDependencies": {
+		"autoprefixer": "10.4.13",
+		"cssnano": "5.1.15",
+		"postcss-normalize": "10.0.1"
+	},
 	"author": "",
 	"license": "MIT"
 }

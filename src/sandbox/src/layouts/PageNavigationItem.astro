@@ -1,0 +1,46 @@
+﻿---
+import PageNavigationItem from './PageNavigationItem.astro';
+
+const { page } = Astro.props; 
+---
+<style>
+    .camina-navigation__item {
+        width: 100%;      
+    }
+    
+    .navigation-button {
+        color: var(--sand-default);
+        text-decoration: none;
+    }
+    
+    .navigation-button {
+        width: 100%;
+        display: block;
+        padding: 0px 1.25em 0px 1.69em;
+        margin: 0;
+         background-color: transparent;
+        outline: transparent;
+        -webkit-font-smoothing: antialiased;
+        font-size: 0.88em;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 2.75em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        user-select: none; 
+    }
+    
+    .navigation-button:hover {
+        background-color: var(--dark-lighter);
+    }
+    
+    .camina-navigation__item .camina-navigation__item .navigation-button {
+        margin: 0 0 0 1.25em;
+    }
+</style>
+<li class="camina-navigation__item">
+    {!page.pages && <a class="navigation-button" href={page.link}>{page.title}</a> }
+    {page.pages && <p class="navigation-button">{page.title}</p><ul style="list-style: none;">{ page.pages.map(p => <PageNavigationItem page={p} />) } </ul>}
+</li>  

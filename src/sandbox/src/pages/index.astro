@@ -1,5 +1,5 @@
 ---
-
+import '../styles/global.css';
 ---
 
 <html lang="ru">
@@ -7,15 +7,72 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>camina</title>
+		<style>
+		    .landing-page {
+		        background-color: var(--dark-default);
+		        height: 100vh;
+		        display: flex;
+                flex-direction: column;
+		    }
+		    
+		    .landing-content {
+		        height: 100%;
+		        display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+		    
+		    .landing-button {
+		        outline: transparent;
+                font-size: 0.88em;
+                font-weight: 400;
+                border: none;
+                border-radius: 0em;
+                box-sizing: border-box;
+                cursor: pointer;
+                padding: 0.76em 0.5em;
+                text-decoration: none;
+                text-align: center;
+                min-width: 2.5em;
+                user-select: none;
+                background-color: transparent;
+                color: var(--sand-default);
+		    }
+		    
+		    .landing-button:hover {
+		        background-color: var(--dark-lighter);
+		    }
+		    
+		    .landing-navigation {
+		        display: flex;
+		        flex-direction: row;
+		        padding: 2em;
+		    }
+		    
+		    .landing-navigation__item {
+		        list-style: none;
+		    }
+		    
+		    .landing-navigation__item .landing-button {
+		        color: var(--sand-default);
+		    }	
+		    
+		    .landing-header {
+		        font-size: 10em;
+                color: var(--orange-default); 
+		    }		  	
+		</style>
 	</head>
-	<body>
-	    <div id="app">
-	        <camina-button />
-	    </div>
-		<script>
-		import '@camina/web-components/widgets/button/ui/button';
-		</script>
+	<body class="landing-page">
+	    <nav class="landing-navigation">
+	        <li class="landing-navigation__item"><a class="landing-button" href="/docs">Документация</a></li>    
+	        <li class="landing-navigation__item"><a class="landing-button" href="https://github.com/madpo/camina">GitHub</a></li>    
+	    </nav>
+	    <div class="landing-content">
+	        <h1 class="landing-header">camina</h1>
+	        <a class="landing-button get-started" href="/docs">Начало работы</a>
+	    </div>	  
 	</body>
 </html>
