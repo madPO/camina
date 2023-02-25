@@ -7,16 +7,18 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"lint": "ts-standard --fix"
 	},
 	"dependencies": {
-		"astro": "^2.0.8",
-		"@camina/web-components": "*"
+		"@camina/web-components": "*",
+		"astro": "^2.0.8"
 	},
 	"devDependencies": {
 		"autoprefixer": "10.4.13",
 		"cssnano": "5.1.15",
-		"postcss-normalize": "10.0.1"
+		"postcss-normalize": "10.0.1",
+		"ts-standard": "^12.0.2"
 	},
 	"author": "",
 	"license": "MIT"
