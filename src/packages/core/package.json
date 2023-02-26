@@ -23,7 +23,7 @@
 		]
 	},
 	"scripts": {
-		"dev": "vite",
+		"dev": "vite build --watch",
 		"build": "vite build",
 		"lint": "ts-standard --fix",
 		"compile-icon-bundle": "ts-node icon-bundle-generate.ts"

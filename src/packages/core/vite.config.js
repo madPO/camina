@@ -16,7 +16,6 @@ export default defineConfig({
     }
   },
   esbuild: {
-    jsx: 'transform',
-    jsxInject: 'import React from "jsx-dom"'
+    jsx: 'transform'
   }
 })

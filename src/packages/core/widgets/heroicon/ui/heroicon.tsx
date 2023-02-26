@@ -1,5 +1,5 @@
 import type { heroiconAttribute } from '../model/heroiconTypes'
-import type { JSX } from 'jsx-dom'
+import React, { JSX } from 'jsx-dom'
 import type { HTMLAttributes } from 'jsx-dom/types'
 
 export function Heroicon (props: HTMLAttributes<HTMLElement> & heroiconAttribute): JSX.Element {
