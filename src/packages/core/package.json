@@ -6,13 +6,13 @@
 		"dist"
 	],
 	"type": "module",
-	"main": "./dist/@camina-core.umd.js",
-	"module": "./dist/@camina-core.js",
+	"main": "./dist/@camina-core.cjs.js",
+	"module": "./dist/@camina-core.es.js",
 	"types": "./dist/@camina-core.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/@camina-core.js",
-			"require": "./dist/@camina-core.umd.js"
+			"import": "./dist/@camina-core.es.js",
+			"require": "./dist/@camina-core.cjs.cjs"
 		}
 	},
 	"ts-standard": {

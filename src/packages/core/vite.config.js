@@ -1,4 +1,3 @@
-import path from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
@@ -8,11 +7,30 @@ export default defineConfig({
     exclude: ['dist']
   })],
   build: {
+    cssCodeSplit: true,
     lib: {
-      entry: path.resolve(__dirname, 'app/index.ts'),
-      name: '@camina/core',
-      fileName: '@camina-core',
-      formats: ['cjs', 'umd', 'es']
+      entry: ['app/index.ts'],
+      formats: ['cjs', 'es']
+    },
+    rollupOptions: {
+      output: {
+        entryFileNames: '@camina-core.[format].js',
+        assetFileNames: '@camina-core/[name].[ext]',
+        chunkFileNames: '[name].[format].js',
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return '@camina-core/utils'
+          }
+
+          const matches = /widgets\/([\w\d]+)\//.exec(id)
+          if (!matches || matches.length <= 0) {
+            return '@camina-core/utils'
+          }
+
+          const widgetName = matches[1]
+          return `@camina-core/${widgetName}`
+        }
+      }
     }
   },
   esbuild: {
