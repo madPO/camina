@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
+import svgBundle from './shared/heroicon/svgBundlePlugin'
 
 export default defineConfig({
   plugins: [dts({
     insertTypesEntry: true,
     exclude: ['dist']
+  }),
+  svgBundle({
+    entry: {
+      mini: './shared/heroicon/20/solid',
+      outline: './shared/heroicon/24/outline',
+      solid: './shared/heroicon/24/solid'
+    }
   })],
   build: {
     cssCodeSplit: true,
