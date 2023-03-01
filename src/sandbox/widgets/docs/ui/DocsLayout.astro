@@ -1,0 +1,29 @@
+﻿---
+import GeneralLayout from '../../general/ui/GeneralLayout.astro'
+
+const { title } = Astro.props;
+---
+<style>
+.docs-navigation__button {
+    width: 1.5em;
+    height: 1.5em;
+    color: var(--sand-default);
+    padding: 1.25em;
+    cursor: pointer;
+}
+
+.docs-body {
+    padding: 1.5em;
+}
+</style>
+<GeneralLayout title={title}>
+    <a class="docs-navigation" href="/docs/components">        
+        <svg class="docs-navigation__button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h2.25a3 3 0 013 3v2.25a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm9.75 0a3 3 0 013-3H18a3 3 0 013 3v2.25a3 3 0 01-3 3h-2.25a3 3 0 01-3-3V6zM3 15.75a3 3 0 013-3h2.25a3 3 0 013 3V18a3 3 0 01-3 3H6a3 3 0 01-3-3v-2.25zm9.75 0a3 3 0 013-3H18a3 3 0 013 3V18a3 3 0 01-3 3h-2.25a3 3 0 01-3-3v-2.25z" clip-rule="evenodd" />
+        </svg>
+    </a>
+    <div class="docs-body">
+        <slot />    
+    </div>
+</GeneralLayout>
+

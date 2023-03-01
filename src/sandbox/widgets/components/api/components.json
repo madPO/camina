@@ -1,0 +1,10 @@
+﻿{
+  "list": [
+    {
+      "title": "Кнопка",
+      "name": "button",
+      "path": "buttom.md",
+      "label": "Действия"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+﻿---
+import DocsLayout from '../../docs/ui/DocsLayout.astro'
+
+const { title, component } = Astro.props;
+
+const components = await Astro.glob(`../../../../../docs/components/*.md`);
+const componentDocs = components.find(x => x.file.endsWith(component + '.md'))
+---  
+<style>
+.component-sandbox {
+    min-height: 85vh;
+}
+</style>
+<DocsLayout title={title}>
+    <div> 
+        <div class="component-sandbox">
+            <slot />
+        </div>
+        <componentDocs.Content />
+    </div>
+</DocsLayout>
