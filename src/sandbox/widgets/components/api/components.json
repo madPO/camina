@@ -5,6 +5,12 @@
       "name": "button",
       "path": "buttom.md",
       "label": "Действия"
+    },
+    {
+      "title": "Иконки",
+      "name": "heroicon",
+      "path": "heroicon.md",
+      "label": "Действия"
     }
   ]
 }

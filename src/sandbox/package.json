@@ -10,6 +10,12 @@
 		"astro": "astro",
 		"lint": "ts-standard --fix"
 	},
+	"ts-standard": {
+		"ignore": [
+			"dist",
+			"node_modules"
+		]
+	},
 	"dependencies": {
 		"@camina/web-components": "*",
 		"astro": "^2.0.8"
