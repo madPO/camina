@@ -1,16 +1,14 @@
 import { defineWebComponent } from '../../../shared/webComponents'
-import { Button, defineButtonAttributes } from '@camina/core'
+import { Heroicon, defineHeroiconAttributes } from '@camina/core'
 import React, { JSX } from 'jsx-dom'
-import type { ButtonAttribute } from '@camina/core/widgets/button/model/buttonTypes'
-import css from '@camina/core/style/button.css?raw'
+import type { heroiconAttribute } from '@camina/core/widgets/heroicon/model/heroiconTypes'
 
-defineWebComponent('camina-button', function ({ defineAttributes, onRender }) {
-  defineAttributes(defineButtonAttributes())
+defineWebComponent('camina-heroicon', function ({ defineAttributes, onRender }) {
+  defineAttributes(defineHeroiconAttributes())
 
-  const component = (props: ButtonAttribute): JSX.Element =>
+  const component = (props: heroiconAttribute): JSX.Element =>
     <>
-      <style>{css}</style>
-      <Button {...props} />
+      <Heroicon {...props} />
     </>
 
   onRender(component)
