@@ -1,6 +1,6 @@
 import type { JSX } from 'jsx-dom'
 
-export function defineWebComponent (tagName: string, setup: WebComponentSetupFunction, extend?: string): void {
+export function defineWebComponent (tagName: string, setup: WebComponentSetupFunction): void {
   const attributes: object = {}
 
   const defineAttributes: (config: object) => void = (props) => {

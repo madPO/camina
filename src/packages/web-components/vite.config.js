@@ -11,12 +11,11 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'app/index.ts'),
       name: '@camina/web-components',
-      fileName: '@web-components',
+      fileName: '@camina-web-components',
       formats: ['cjs', 'umd', 'es']
     },
     esbuild: {
-      jsx: 'transform',
-      jsxInject: 'import React from "jsx-dom";'
+      jsx: 'transform'
     },
     rollupOptions: {
       external: ['@camina/core'],
