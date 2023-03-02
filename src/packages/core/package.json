@@ -21,6 +21,10 @@
 		"./style/*.css": {
 			"import": "./dist/@camina-core/*.css",
 			"require": "./dist/@camina-core/*.css"
+		},
+		"./icons/*.svg": {
+			"import": "./dist/@camina-core/icons/*.svg",
+			"require": "./dist/@camina-core/icons/*.svg"
 		}
 	},
 	"ts-standard": {

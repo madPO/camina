@@ -7,7 +7,7 @@ export function Heroicon (props: HTMLAttributes<HTMLElement> & heroiconAttribute
 
   return (
     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox={(`0 0 ${size} ${size}`)} stroke='currentColor' aria-hidden='true'>
-      <use xlinkHref={`${props.type}.svg#${props.name}`} />
+      <use xlinkHref={`/${props.type}.svg#${props.name}`} />
     </svg>
   )
 }
