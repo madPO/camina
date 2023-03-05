@@ -12,6 +12,19 @@ export default defineConfig({
       mini: './shared/heroicon/20/solid',
       outline: './shared/heroicon/24/outline',
       solid: './shared/heroicon/24/solid'
+    },
+    svgo: {
+      plugins: [
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              collapseGroups: false,
+              cleanupIds: false
+            }
+          }
+        }
+      ]
     }
   })],
   build: {
