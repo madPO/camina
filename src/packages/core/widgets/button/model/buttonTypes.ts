@@ -1,9 +1,11 @@
 export interface ButtonAttribute {
   label: string
 
-  description: string | undefined
+  description?: string
 
-  icon: string | undefined
+  iconSrc?: string
+
+  iconName?: string
 
   type: 'default' | 'ghost'
 
