@@ -1,0 +1,10 @@
+﻿.heroicon-component {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heroicon-component .component {
+    fill: var(--sand-default);
+    color: transparent;
+}

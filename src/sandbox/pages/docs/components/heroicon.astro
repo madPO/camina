@@ -1,10 +1,13 @@
 ﻿---
 import ComponentsLayout from '../../../widgets/components/ui/ComponentsLayout.astro'
-import "@camina/core/icons/outline.svg"
+import iconSrc from '@camina/core/icons/solid.svg'
+import './heroicon.css'
 ---
 <script>
 import "@camina/web-components"
 </script>
 <ComponentsLayout title="Иконки" component="heroicon">
-    <camina-heroicon type="outline" name="arrow-down-circle" ></camina-heroicon>
+    <div class="heroicon-component">
+        <camina-heroicon class="component" src={iconSrc} name="arrow-down-circle" />
+    </div>
 </ComponentsLayout>
