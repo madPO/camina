@@ -1,10 +1,12 @@
 ﻿---
 import DocsLayout from '../../docs/ui/DocsLayout.astro'
+import './ComponentsLayout.css'
 
 const { title, component } = Astro.props;
 
 const components = await Astro.glob(`../../../../../docs/components/*.md`);
 const componentDocs = components.find(x => x.file.endsWith(component + '.md'))
+const heading = await componentDocs.getHeadings();
 ---  
 <style>
 .component-sandbox {
@@ -16,6 +18,13 @@ const componentDocs = components.find(x => x.file.endsWith(component + '.md'))
         <div class="component-sandbox">
             <slot />
         </div>
-        <componentDocs.Content />
+        <div class="component-sandbox__docs">
+            <nav class="component-sandbox__navigation">
+                {heading.filter(x => x.depth > 1).map(x => <li><a href={"#"+x.slug} >{x.text}</a></li>)}
+            </nav>
+            <div class="component-sandbox__docs-body">
+                <componentDocs.Content />
+            </div>
+        </div>
     </div>
 </DocsLayout>

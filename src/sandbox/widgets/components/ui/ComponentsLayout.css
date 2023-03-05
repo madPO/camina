@@ -1,0 +1,30 @@
+﻿.component-sandbox {
+    min-height: 85vh;
+    background-image: radial-gradient(#404040 2%, transparent 2%),
+    radial-gradient(#bdbec0 2%, transparent 2%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+}
+
+.component-sandbox__navigation {
+    list-style: square;
+    position: sticky;
+}
+
+.component-sandbox__navigation a {
+    text-decoration: underline;
+    color: var(--sand-default);
+}
+.component-sandbox__navigation a:hover{
+    color: var(--sand-dark);
+}
+
+.component-sandbox__docs {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.component-sandbox__docs-body {
+    flex-grow: 1;
+}

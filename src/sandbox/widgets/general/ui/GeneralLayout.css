@@ -1,0 +1,35 @@
+﻿@import-sanitize;
+
+@font-face {
+    src: url('/fonts/JetBrainsMono.ttf') format('woff2-variations');
+    font-family: 'JetBrainsMono';
+    font-weight: 100 900;
+}
+
+:root {
+    --dark-default: hsl(0 0% 9%);
+    --dark-lighter: hsl(0 0% 13%);
+    --dark-light: hsl(0 0% 17%);
+
+    --emerald-default: hsl(154 33% 30%);
+    --orange-default: hsl(10 61% 49%);
+
+    --sand-dark: hsl(40 57% 67%);
+    --sand-darker: hsl(40 57% 75%);
+    --sand-default: hsl(40 57% 83%);
+    --sand-lighter: hsl(40 57% 87%);
+    --sand-light: hsl(40 57% 93%);
+    /* 1em = 16px  
+   font-size: 16px; */
+}
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.camina-page {
+    background-color: var(--dark-default);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
