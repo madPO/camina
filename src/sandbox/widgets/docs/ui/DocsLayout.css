@@ -1,7 +1,7 @@
 ﻿.docs-navigation__button {
     width: 1.5em;
     height: 1.5em;
-    fill: var(--sand-default);
+    fill: var(--sand-900);
     padding: 1.25em;
     cursor: pointer;
     color: transparent;
@@ -10,12 +10,7 @@
 
 .docs-body {
     padding: 1.5em;
-    color: var(--sand-default);
-}
-
-.docs-body code {
-    color: var(--sand-light) !important;
-    background-color: var(--dark-lighter) !important;
+    color: var(--sand-900);
 }
 
 .docs-body table {
@@ -24,9 +19,10 @@
 }
 
 .docs-body .astro-code {
-    background-color: var(--dark-lighter) !important;
     padding: 0.5em;
 }
-.docs-body .astro-code * {
-    color: var(--sand-light) !important;
+
+.docs-body .astro-code *, .docs-body .astro-code, .docs-body code {
+    color: var(--sand-11000) !important;
+    background-color: var(--nero-75) !important;
 }

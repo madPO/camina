@@ -1,36 +1,15 @@
+---
+import '../app/general.css'
+---
 <html lang="ru">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<title>camina</title>
-		<style>
-		    @import-sanitize;
-            
-            @font-face {
-                src: url('/fonts/JetBrainsMono.ttf') format('woff2-variations');
-                font-family: 'JetBrainsMono';
-                font-weight: 100 900;
-            }
-            
-            :root {
-                --dark-default: hsl(0 0% 9%);
-                --dark-lighter: hsl(0 0% 13%);
-                --dark-light: hsl(0 0% 17%);
-                
-                --emerald-default: hsl(154 33% 30%);
-                --orange-default: hsl(10 61% 49%);
-                --sand-default: hsl(40 57% 83%);
-                /* 1em = 16px  
-               font-size: 16px; */
-            }
-            
-            * {
-                font-family: 'JetBrains Mono', monospace;
-            }
-                    
+		<style>  
 		    .landing-page {
-		        background-color: var(--dark-default);
+		        background-color: var(--nero-50);
 		        height: 100vh;
 		        display: flex;
                 flex-direction: column;
@@ -58,11 +37,11 @@
                 min-width: 2.5em;
                 user-select: none;
                 background-color: transparent;
-                color: var(--sand-default);
+                color: var(--sand-900);
 		    }
 		    
 		    .landing-button:hover {
-		        background-color: var(--dark-lighter);
+		        background-color: var(--nero-75);
 		    }
 		    
 		    .landing-navigation {
@@ -76,12 +55,12 @@
 		    }
 		    
 		    .landing-navigation__item .landing-button {
-		        color: var(--sand-default);
+		        color: var(--sand-900);
 		    }	
 		    
 		    .landing-header {
-		        font-size: 10em;
-                color: var(--orange-default); 
+		        font-size: 7em;
+                color: var(--orange-900); 
 		    }		  	
 		</style>
 	</head>

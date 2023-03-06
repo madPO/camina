@@ -1,0 +1,80 @@
+﻿@import-sanitize;
+
+@font-face {
+    src: url('/fonts/JetBrainsMono.ttf') format('woff2-variations');
+    font-family: 'JetBrainsMono';
+    font-weight: 100 900;
+}
+
+:root {
+/*    nero:       #161616 
+    emerald:    #346751
+    orange:     #C84B31 
+    sand:       #ECDBBA */
+
+    /*  #161616 */
+    --nero-50: oklch(20.02% 0 0);
+    /*  #202020 */
+    --nero-75: oklch(24.35% 0 0);
+    /*  #2d2d2d */
+    --nero-100: oklch(29.72% 0 0);
+    /*  #3b3b3b */
+    --nero-200: oklch(35.23% 0 0);
+    /*  #4f4f4f */
+    --nero-300: oklch(42.76% 0 0);
+    /*  #6b6b6b */
+    --nero-400: oklch(52.78% 0 0);
+    /*  #8b8b8b */
+    --nero-500: oklch(63.68% 0 0);
+    /*  #ababab */
+    --nero-600: oklch(74.12% 0 0);
+    /*  #cacaca */
+    --nero-700: oklch(83.9% 0 0);
+    /*  #e3e3e3 */
+    --nero-800: oklch(91.58% 0 0);
+    /*  #f7f7f7 */
+    --nero-900: oklch(97.61% 0 0);
+
+    /*  #32624d */
+    --emerald-400: oklch(45.56% 0.063 163.64);
+
+    /*  #cd4c32 */
+    --orange-600: oklch(58.75% 0.169 33.26);
+    /*  #e29788 */
+    --orange-900: oklch(74.73% 0.094 31.8);
+
+    /*  #433314 */
+    --sand-100: oklch(33.17% 0.051 81.86);
+    /*  #533d18 */
+    --sand-200: oklch(37.62% 0.061 78);
+    /*  #5f461c */
+    --sand-300: oklch(41.22% 0.067 77.87);
+    /*  #735521 */
+    --sand-400: oklch(47.05% 0.079 78.34);
+    /*  #836125 */
+    --sand-500: oklch(51.58% 0.088 78.59);
+    /*  #976f2b */
+    --sand-600: oklch(56.92% 0.098 77.52);
+    /*  #af8131 */
+    --sand-700: oklch(63.39% 0.111 77.88);
+    /*  #c79338 */
+    --sand-800: oklch(69.71% 0.122 77.96);
+    /*  #d0a458 */
+    --sand-900: oklch(74.37% 0.108 79.54);
+    /*  #dab87c */
+    --sand-10000: oklch(79.87% 0.087 81.16);
+    /*  #e4cba0 */
+    --sand-11000: oklch(85.25% 0.063 81.08);
+    /*  #eddcba */
+    --sand-12000: oklch(89.96% 0.049 84.55);
+    /*  #f4ead7 */
+    --sand-13000: oklch(93.99% 0.027 83.54);
+
+    font-size: 30px;
+    /* 1em = 16px  
+   font-size: 16px; */
+}
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+}

@@ -8,11 +8,6 @@ const components = await Astro.glob(`../../../../../docs/components/*.md`);
 const componentDocs = components.find(x => x.file.endsWith(component + '.md'))
 const heading = await componentDocs.getHeadings();
 ---  
-<style>
-.component-sandbox {
-    min-height: 85vh;
-}
-</style>
 <DocsLayout title={title}>
     <div> 
         <div class="component-sandbox">

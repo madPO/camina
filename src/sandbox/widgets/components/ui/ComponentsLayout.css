@@ -1,5 +1,5 @@
 ﻿.component-sandbox {
-    min-height: 85vh;
+    min-height: 80vh;
     background-image: radial-gradient(#404040 2%, transparent 2%),
     radial-gradient(#bdbec0 2%, transparent 2%);
     background-position: 0 0, 25px 25px;
@@ -9,6 +9,8 @@
 .component-sandbox__navigation {
     list-style: square;
     position: sticky;
+    top: 0;
+    align-self: flex-start
 }
 
 .component-sandbox__navigation a {
@@ -16,7 +18,7 @@
     color: var(--sand-default);
 }
 .component-sandbox__navigation a:hover{
-    color: var(--sand-dark);
+    color: var(--sand-800);
 }
 
 .component-sandbox__docs {
