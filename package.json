@@ -1,10 +1,6 @@
 {
 	"name": "camina",
 	"version": "0.0.1",
-	"workspaces": [
-		"src/packages/*",
-		"src/sandbox"
-	],
 	"scripts": {
 		"prepare": "husky install"
 	},

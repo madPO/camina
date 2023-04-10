@@ -8,7 +8,7 @@
 	"type": "module",
 	"main": "./dist/@camina-core.cjs.js",
 	"module": "./dist/@camina-core.es.js",
-	"types": "./dist/@camina-core.d.ts",	
+	"types": "./dist/@camina-core.d.ts",
 	"exports": {
 		".": {
 			"import": "./dist/@camina-core.es.js",
@@ -42,13 +42,12 @@
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/glob": "^8.0.1",
-		"autoprefixer": "^10.4.13",
-		"cssnano": "^5.1.15",
-		"glob": "^8.1.0",
-		"svgo": "^3.0.2",
-		"ts-standard": "^12.0.2",
-		"vite-plugin-dts": "^2.0.2"
+		"@camina/heroicon-sprite": "workspace:*",
+		"autoprefixer": "10.4.13",
+		"cssnano": "5.1.15",
+		"ts-standard": "12.0.2",
+		"vite-plugin-dts": "2.0.2",
+		"vite": "4.2.1"
 	},
 	"dependencies": {
 		"jsx-dom": "^8.0.5"

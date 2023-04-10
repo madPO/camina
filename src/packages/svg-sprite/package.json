@@ -1,0 +1,39 @@
+{
+	"name": "@camina/svg-sprite",
+	"version": "0.0.1",
+	"description": "",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"module": "./dist/rollup-plugin-camina-svg-sprite.es.js",
+	"types": "./dist/rollup-plugin-camina-svg-sprite.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/rollup-plugin-camina-svg-sprite.es.js"
+		}
+	},
+	"ts-standard": {
+		"ignore": [
+			"dist",
+			"node_modules"
+		]
+	},
+	"scripts": {
+		"dev": "vite build --watch",
+		"build": "vite build",
+		"lint": "ts-standard --fix"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"rollup": "3.20.2",
+		"ts-standard": "12.0.2",
+		"vite": "4.2.1",
+		"vite-plugin-dts": "2.0.2"
+	},
+	"dependencies": {
+		"fast-glob": "^3.2.12",
+		"svgo": "3.0.2"
+	}
+}

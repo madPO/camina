@@ -1,0 +1,3 @@
+[submodule "src/packages/heroicon-sprite/shared/heroicon"]
+	path = src/packages/heroicon-sprite/shared/heroicon
+	url = https://github.com/tailwindlabs/heroicons.git

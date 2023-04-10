@@ -29,14 +29,15 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"@camina/core": "*"
+		"@camina/core": "workspace:*",
+		"vite": "^4.2.1"
 	},
 	"devDependencies": {
 		"@types/glob": "^8.0.1",
 		"autoprefixer": "^10.4.13",
 		"cssnano": "^5.1.15",
+		"jsx-dom": "^8.0.5",
 		"ts-standard": "^12.0.2",
-		"vite-plugin-dts": "^2.0.2",
-		"jsx-dom": "^8.0.5"
+		"vite-plugin-dts": "^2.0.2"
 	}
 }

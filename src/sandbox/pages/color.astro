@@ -1,0 +1,30 @@
+﻿---
+import DocsLayout from '../widgets/docs/ui/DocsLayout.astro'
+import { getContrast, reference } from '../shared/color'
+import { formatRgb, filterContrast } from 'culori'
+
+---
+<script>
+    import '../shared/color'
+</script>
+<style type="text/css">
+.color-example {
+    display: flex;
+    flex-direction: row;
+}
+.color-example li div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+</style>
+<DocsLayout title="Начало работы">
+<div class="color-example">
+    <ul class="color-reference">
+        {Object.keys(reference.light.gray).map(k => <li class="color-palette"><div style={ `background-color: ${formatRgb(reference.light.gray[k])}` }></div> gray-{k}</li>)}
+    </ul> 
+    <ul class="color-test">
+        {Object.entries(getContrast().light.gray).map(([k, v]) => <li class="color-palette"><div style={ `background-color: ${formatRgb(filterContrast(v, 'hsl')(reference.light.gray['100']))}` }></div> {v}</li>)}
+    </ul>    
+</div>
+</DocsLayout>
