@@ -1,6 +1,13 @@
 {
+  "rootDir": "app",
   "compilerOptions": {
-    "jsx": "react",
-    "esModuleInterop": true
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "outDir": "./dist"
   }
 }

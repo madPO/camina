@@ -1,8 +1,8 @@
-import * as fs from 'fs'
+import fs from 'fs'
 import path from 'path'
 import type {EmittedAsset, Plugin, NormalizedInputOptions} from 'rollup'
 import {type Config, optimize} from 'svgo'
-import fg from 'fast-glob'
+import glob from 'glob'
 
 export interface SvgSpriteEntry {
     input: string,
@@ -22,19 +22,26 @@ export interface SvgSpriteOptions {
     optimisation?: Config & { disable: boolean },
 }
 
-async function mapEntry(entryName: string, entry: SvgSpriteEntry): Promise<{ asset: EmittedAsset, files: string[] }> {     
+function mapEntry(entryName: string, entry: SvgSpriteEntry): Promise<{ asset: EmittedAsset, files: string[] }> {     
     const asset: EmittedAsset = {
         type: 'asset',
         name: `${entryName}.svg`,
         fileName: `${entryName}.svg`,
     }
     
-    let files = await fg([entry.input], { ignore: entry.except, onlyFiles: true, dot: true });             
-    if(entry.onlyInclude){
-        files = files.filter(x => entry.onlyInclude?.some(s => x.includes(s)))
-    }
+    return new Promise((resolve, reject) => {
+        glob(entry.input, {ignore: entry.except}, function (exception, files) {
+            if(exception){
+                reject(exception);
+            }
+            
+            if (entry.onlyInclude) {
+                files = files.filter(x => entry.onlyInclude?.some(s => x.includes(s)))
+            }
 
-    return { asset, files };
+            resolve({asset, files});
+        });
+    });
 }
 
 function buildSprite(entry: { asset: EmittedAsset, files: string[] }): EmittedAsset{

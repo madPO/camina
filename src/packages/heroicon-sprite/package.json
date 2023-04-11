@@ -6,13 +6,18 @@
 		"dist"
 	],
 	"type": "module",
-	"main": "./dist/rollup-plugin-camina-heroicon-sprite.cjs.js",
-	"module": "./dist/rollup-plugin-camina-heroicon-sprite.es.js",
-	"types": "./dist/rollup-plugin-camina-heroicon-sprite.d.ts",
 	"exports": {
-		".": {
-			"import": "./dist/rollup-plugin-camina-heroicon-sprite.es.js",
-			"require": "./dist/rollup-plugin-camina-heroicon-sprite.cjs.js"
+		"./heroicon-mini.svg": {
+			"import": "./dist/heroicon-mini.svg",
+			"require": "./dist/heroicon-mini.svg"
+		},
+		"./heroicon-outline.svg": {
+			"import": "./dist/heroicon-outline.svg",
+			"require": "./dist/heroicon-outline.svg"
+		},
+		"./heroicon-solid.svg": {
+			"import": "./dist/heroicon-solid.svg",
+			"require": "./dist/heroicon-solid.svg"
 		}
 	},
 	"ts-standard": {
@@ -24,13 +29,14 @@
 	"scripts": {
 		"dev": "vite build --watch",
 		"build": "vite build",
-		"lint": "ts-standard --fix"
+		"lint": "ts-standard --fix",
+		"build-dist": "tsc",
+		"prebuild": "rimraf dist"
 	},
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
 		"rollup": "^3.20.2",
-		"svgo": "^3.0.2",
 		"ts-standard": "^12.0.2",
 		"vite-plugin-dts": "^2.0.2",
 		"vite": "^4.2.1"
