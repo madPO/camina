@@ -1,10 +1,10 @@
 ﻿.docs-navigation__button {
     width: 1.5em;
     height: 1.5em;
-    fill: var(--sand-900);
+    color: var(--sand-900);
+    fill: currentColor;
     padding: 1.25em;
     cursor: pointer;
-    color: transparent;
     display: block;
 }
 

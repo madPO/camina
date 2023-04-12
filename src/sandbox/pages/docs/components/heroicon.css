@@ -5,6 +5,5 @@
 }
 
 .heroicon-component .component {
-    fill: var(--sand-default);
-    color: transparent;
+    color: red;
 }
