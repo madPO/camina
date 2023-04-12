@@ -27,9 +27,6 @@ importers:
         specifier: ^8.0.5
         version: 8.0.5
     devDependencies:
-      '@camina/heroicon-sprite':
-        specifier: workspace:*
-        version: link:../heroicon-sprite
       autoprefixer:
         specifier: 10.4.13
         version: 10.4.13(postcss@8.4.21)
@@ -120,6 +117,9 @@ importers:
 
   src/sandbox:
     dependencies:
+      '@camina/heroicon-sprite':
+        specifier: workspace:*
+        version: link:../packages/heroicon-sprite
       '@camina/web-components':
         specifier: workspace:*
         version: link:../packages/web-components

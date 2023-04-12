@@ -20,7 +20,8 @@
 		"@camina/web-components": "workspace:*",
 		"astro": "^2.0.8",
 		"culori": "^3.0.1",
-		"postcss-preset-env": "^8.0.1"
+		"postcss-preset-env": "^8.0.1",
+		"@camina/heroicon-sprite": "workspace:*"
 	},
 	"devDependencies": {
 		"autoprefixer": "10.4.13",
