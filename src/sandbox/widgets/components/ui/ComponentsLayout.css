@@ -1,9 +1,12 @@
 ﻿.component-sandbox {
-    min-height: 80vh;
+    min-height: 75vh;
     background-image: radial-gradient(#404040 2%, transparent 2%),
     radial-gradient(#bdbec0 2%, transparent 2%);
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .component-sandbox__navigation {

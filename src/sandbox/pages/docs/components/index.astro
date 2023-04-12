@@ -1,14 +1,23 @@
 ﻿---
 import DocsLayout from '../../../widgets/docs/ui/DocsLayout.astro';
 import components from '../../../widgets/components/api/components.json';
+import plugins from '../../../widgets/plugins/api/plugins.json';
 ---
 <DocsLayout title="Компоненты">
-    <h1>Компоненты</h1>
+    <h2>Компоненты</h2>
     <ul>
         {components.list.map(c => 
             <li>
-                <a href=`/docs/components/${c.name}.html`><div><h2>{c.title}</h2></div></a>
+                <a href=`/docs/components/${c.name}.html`><div><h3>{c.title}</h3></div></a>
             </li>
         )}
     </ul>
+    <h2>Плагины</h2>
+        <ul>
+            {plugins.list.map(c => 
+                <li>
+                    <a href=`/docs/plugins/${c.name}.html`><div><h3>{c.title}</h3></div></a>
+                </li>
+            )}
+        </ul>
 </DocsLayout>

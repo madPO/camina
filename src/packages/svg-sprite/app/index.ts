@@ -12,9 +12,7 @@ export interface SvgSpriteEntry {
     except?: string[]
 }
 
-export interface SvgSpriteOptions {
-    output: string,
-    
+export interface SvgSpriteOptions {    
     entry: { 
         [id: string]: SvgSpriteEntry,
     },

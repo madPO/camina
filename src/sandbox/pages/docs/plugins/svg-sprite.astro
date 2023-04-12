@@ -1,0 +1,23 @@
+﻿---
+import DocsLayout from '../../../widgets/docs/ui/DocsLayout.astro';
+
+const components = await Astro.glob(`../../../../../docs/plugins/*.md`);
+const componentDocs = components.find(x => x.file.endsWith('svg-sprite.md'));
+const heading = await componentDocs.getHeadings();
+---
+<script>
+import "@camina/web-components"
+import "../../../widgets/components/ui/ComponentsLayout.css";
+</script>
+<DocsLayout title="svg-sprite">
+    <div> 
+        <div class="component-sandbox__docs">
+            <nav class="component-sandbox__navigation">
+                {heading.filter(x => x.depth > 1).map(x => <li><a href={"#"+x.slug} >{x.text}</a></li>)}
+            </nav>
+            <div class="component-sandbox__docs-body">
+                <componentDocs.Content />
+            </div>
+        </div>
+    </div>
+</DocsLayout>
