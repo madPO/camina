@@ -1,10 +1,10 @@
 ﻿# Начало работы
 UI-kit включает в себя:
 * headless `@camina/core` с шаблонами компонентов и их поведением
-* web-component's `@camina/web-components`
+* web-component'ы `@camina/web-components`
 * etc
 
 ## Установка
 ```
-npm i @astro/web-components
+npm i @camina/web-components
 ```
