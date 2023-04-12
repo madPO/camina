@@ -19,8 +19,8 @@
 			"require": "./dist/@camina-core/**/*.cjs.js"
 		},
 		"./style/*.css": {
-			"import": "./dist/@camina-core/*.css",
-			"require": "./dist/@camina-core/*.css"
+			"import": "./dist/assert/*.css",
+			"require": "./dist/assert/*.css"
 		}
 	},
 	"ts-standard": {
