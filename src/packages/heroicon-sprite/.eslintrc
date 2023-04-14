@@ -1,4 +1,3 @@
 ﻿{
-  "extends": "@antfu/eslint-config-ts",
-  "ignorePatterns": ["shared/heroicon/**"]
+  "extends": "@antfu/eslint-config-ts"
 }

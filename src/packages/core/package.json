@@ -31,7 +31,8 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "jsx-dom": "^8.0.5"
+    "jsx-dom": "^8.0.5",
+    "lint-staged": "^13.2.1"
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "0.38.4",
@@ -42,5 +43,8 @@
     "eslint": "^8.38.0",
     "vite": "4.2.1",
     "vite-plugin-dts": "2.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,yaml,md}": "eslint --fix"
   }
 }

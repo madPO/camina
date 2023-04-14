@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "glob": "8.1.0",
+    "lint-staged": "^13.2.1",
     "svgo": "3.0.2"
   },
   "devDependencies": {
@@ -33,5 +34,8 @@
     "rollup": "3.20.2",
     "vite": "4.2.1",
     "vite-plugin-dts": "2.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,yaml,md}": "eslint --fix"
   }
 }

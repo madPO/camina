@@ -30,7 +30,8 @@
     "prebuild": "rimraf dist"
   },
   "dependencies": {
-    "@camina/svg-sprite": "workspace:*"
+    "@camina/svg-sprite": "workspace:*",
+    "lint-staged": "^13.2.1"
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.38.4",
@@ -40,5 +41,8 @@
     "rollup": "^3.20.2",
     "vite": "^4.2.1",
     "vite-plugin-dts": "^2.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,yaml,md}": "eslint --fix"
   }
 }

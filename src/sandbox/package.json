@@ -16,6 +16,8 @@
     "@camina/web-components": "workspace:*",
     "astro": "^2.0.8",
     "culori": "^3.0.1",
+    "lint-staged": "^13.2.1",
+    "postcss-preset-env": "^8.0.1"
     "postcss-preset-env": "^8.0.1",
     "@camina/heroicon-sprite": "workspace:*"
   },
@@ -28,5 +30,8 @@
     "eslint": "^8.38.0",
     "postcss-normalize": "10.0.1",
     "vite": "^4.2.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,yaml,md}": "eslint --fix"
   }
 }

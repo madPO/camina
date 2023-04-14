@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@camina/core": "workspace:*",
+    "lint-staged": "^13.2.1",
     "vite": "^4.2.1"
   },
   "devDependencies": {
@@ -36,5 +37,8 @@
     "eslint": "^8.38.0",
     "jsx-dom": "^8.0.5",
     "vite-plugin-dts": "^2.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,yaml,md}": "eslint --fix"
   }
 }
