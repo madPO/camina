@@ -1,6 +1,6 @@
 import type { JSX } from 'jsx-dom'
 
-export function defineWebComponent (tagName: string, setup: WebComponentSetupFunction): void {
+export function defineWebComponent(tagName: string, setup: WebComponentSetupFunction): void {
   const attributes: object = {}
 
   const defineAttributes: (config: object) => void = (props) => {
@@ -26,44 +26,42 @@ export function defineWebComponent (tagName: string, setup: WebComponentSetupFun
 
   setup({ defineAttributes, onConnected, onDisconnected, onRender })
   customElements.define(tagName, class extends HTMLElement {
-    constructor () {
+    constructor() {
       super()
 
-      for (const key in attributes) {
+      for (const key in attributes)
         this[key] = attributes[key]
-      }
     }
 
-    connectedCallback (): void {
+    connectedCallback(): void {
       const root = this.attachShadow({ mode: 'open' })
       this._render(root)
 
       void connectedHook()
     }
 
-    disconnectedCallback (): void {
+    disconnectedCallback(): void {
       void disconnectedHook()
     }
 
-    static get observedAttributes (): string[] {
+    static get observedAttributes(): string[] {
       const attrs: string[] = []
-      Object.keys(attributes).forEach(function (key) {
+      Object.keys(attributes).forEach((key) => {
         attrs.push(key)
       })
       return attrs
     }
 
-    attributeChangedCallback (name: string, oldValue: string, newValue: string): void {
+    attributeChangedCallback(): void {
       //  todo: тут скорее всего нужен будет дебоунс
       const root: ShadowRoot | null = this.shadowRoot
 
       this._render(root)
     }
 
-    private _render (root: ShadowRoot | null): void {
-      if (root == null) {
+    private _render(root: ShadowRoot | null): void {
+      if (root == null)
         return
-      }
 
       root.replaceChildren()
       const props = {}
@@ -74,15 +72,13 @@ export function defineWebComponent (tagName: string, setup: WebComponentSetupFun
 
       const child = renderHook(props)
 
-      if (child == null) {
+      if (child == null)
         return
-      }
 
-      if (Array.isArray(child)) {
+      if (Array.isArray(child))
         child.forEach(x => root.appendChild(x))
-      } else {
+      else
         root.appendChild(child)
-      }
     }
   })
 }

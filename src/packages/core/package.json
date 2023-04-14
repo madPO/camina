@@ -1,50 +1,46 @@
 {
-	"name": "@camina/core",
-	"version": "0.0.1",
-	"description": "",
-	"files": [
-		"dist"
-	],
-	"type": "module",
-	"main": "./dist/@camina-core.cjs.js",
-	"module": "./dist/@camina-core.es.js",
-	"types": "./dist/@camina-core.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/@camina-core.es.js",
-			"require": "./dist/@camina-core.cjs.js"
-		},
-		"./components/*": {
-			"import": "./dist/@camina-core/**/*.es.js",
-			"require": "./dist/@camina-core/**/*.cjs.js"
-		},
-		"./style/*.css": {
-			"import": "./dist/assert/*.css",
-			"require": "./dist/assert/*.css"
-		}
-	},
-	"ts-standard": {
-		"ignore": [
-			"dist",
-			"node_modules",
-			"shared/heroicon/*.svg"
-		]
-	},
-	"scripts": {
-		"dev": "vite build --watch",
-		"build": "vite build",
-		"lint": "ts-standard --fix"
-	},
-	"author": "",
-	"license": "MIT",
-	"devDependencies": {
-		"autoprefixer": "10.4.13",
-		"cssnano": "5.1.15",
-		"ts-standard": "12.0.2",
-		"vite-plugin-dts": "2.0.2",
-		"vite": "4.2.1"
-	},
-	"dependencies": {
-		"jsx-dom": "^8.0.5"
-	}
+  "name": "@camina/core",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/@camina-core.cjs.js",
+      "import": "./dist/@camina-core.es.js"
+    },
+    "./components/*": {
+      "require": "./dist/@camina-core/**/*.cjs.js",
+      "import": "./dist/@camina-core/**/*.es.js"
+    },
+    "./style/*.css": {
+      "require": "./dist/@camina-core/*.css",
+      "import": "./dist/@camina-core/*.css"
+    }
+  },
+  "main": "./dist/@camina-core.cjs.js",
+  "module": "./dist/@camina-core.es.js",
+  "types": "./dist/@camina-core.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "jsx-dom": "^8.0.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "0.38.4",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "autoprefixer": "10.4.13",
+    "cssnano": "5.1.15",
+    "eslint": "^8.38.0",
+    "vite": "4.2.1",
+    "vite-plugin-dts": "2.0.2"
+  }
 }

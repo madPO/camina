@@ -1,47 +1,44 @@
 {
-	"name": "@camina/heroicon-sprite",
-	"version": "0.0.1",
-	"description": "",
-	"files": [
-		"dist"
-	],
-	"type": "module",
-	"exports": {
-		"./heroicon-mini.svg": {
-			"import": "./dist/heroicon-mini.svg",
-			"require": "./dist/heroicon-mini.svg"
-		},
-		"./heroicon-outline.svg": {
-			"import": "./dist/heroicon-outline.svg",
-			"require": "./dist/heroicon-outline.svg"
-		},
-		"./heroicon-solid.svg": {
-			"import": "./dist/heroicon-solid.svg",
-			"require": "./dist/heroicon-solid.svg"
-		}
-	},
-	"ts-standard": {
-		"ignore": [
-			"dist",
-			"node_modules"
-		]
-	},
-	"scripts": {
-		"dev": "vite build --watch",
-		"build": "vite build",
-		"lint": "ts-standard --fix",
-		"build-dist": "tsc",
-		"prebuild": "rimraf dist"
-	},
-	"author": "",
-	"license": "MIT",
-	"devDependencies": {
-		"rollup": "^3.20.2",
-		"ts-standard": "^12.0.2",
-		"vite-plugin-dts": "^2.0.2",
-		"vite": "^4.2.1"
-	},
-	"dependencies": {
-		"@camina/svg-sprite": "workspace:*"
-	}
+  "name": "@camina/heroicon-sprite",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    "./heroicon-mini.svg": {
+      "require": "./dist/heroicon-mini.svg",
+      "import": "./dist/heroicon-mini.svg"
+    },
+    "./heroicon-outline.svg": {
+      "require": "./dist/heroicon-outline.svg",
+      "import": "./dist/heroicon-outline.svg"
+    },
+    "./heroicon-solid.svg": {
+      "require": "./dist/heroicon-solid.svg",
+      "import": "./dist/heroicon-solid.svg"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "lint": "eslint . --fix",
+    "build-dist": "tsc",
+    "prebuild": "rimraf dist"
+  },
+  "dependencies": {
+    "@camina/svg-sprite": "workspace:*"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.38.4",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "rollup": "^3.20.2",
+    "vite": "^4.2.1",
+    "vite-plugin-dts": "^2.0.2"
+  }
 }

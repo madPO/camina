@@ -1,2 +1,2 @@
-export * from '../widgets/button/ui/button'
-export * from '../widgets/heroicon/ui/heroicon'
+import '../widgets/button/ui/button'
+import '../widgets/heroicon/ui/heroicon'

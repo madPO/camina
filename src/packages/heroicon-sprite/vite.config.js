@@ -16,7 +16,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['app/index.ts'],
-      formats: ['es']
-    }
-  }
+      formats: ['es'],
+    },
+  },
 })

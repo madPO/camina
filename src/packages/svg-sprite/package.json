@@ -1,40 +1,37 @@
 {
-	"name": "@camina/svg-sprite",
-	"version": "0.0.1",
-	"description": "",
-	"files": [
-		"dist"
-	],
-	"type": "module",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/index.js"
-		}
-	},
-	"ts-standard": {
-		"ignore": [
-			"dist",
-			"node_modules"
-		]
-	},
-	"scripts": {
-		"lint": "ts-standard --fix",
-		"build": "tsc",
-		"prebuild": "rimraf dist"
-	},
-	"author": "",
-	"license": "MIT",
-	"devDependencies": {
-		"@types/glob": "8.1.0",
-		"rollup": "3.20.2",
-		"ts-standard": "12.0.2",
-		"vite": "4.2.1",
-		"vite-plugin-dts": "2.0.2"
-	},
-	"dependencies": {
-		"glob": "8.1.0",
-		"svgo": "3.0.2"
-	}
+  "name": "@camina/svg-sprite",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "build": "tsc",
+    "prebuild": "rimraf dist"
+  },
+  "dependencies": {
+    "glob": "8.1.0",
+    "svgo": "3.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.38.4",
+    "@types/glob": "8.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "rollup": "3.20.2",
+    "vite": "4.2.1",
+    "vite-plugin-dts": "2.0.2"
+  }
 }

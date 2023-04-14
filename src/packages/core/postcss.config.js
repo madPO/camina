@@ -4,6 +4,6 @@ import cssnanoPlugin from 'cssnano'
 export default {
   plugins: [
     autoprefixer,
-    cssnanoPlugin
-  ]
+    cssnanoPlugin,
+  ],
 }

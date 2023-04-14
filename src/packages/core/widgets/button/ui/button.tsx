@@ -1,10 +1,11 @@
+import type { JSX } from 'jsx-dom'
+import React from 'jsx-dom'
+import type { HTMLAttributes } from 'jsx-dom/types'
 import type { ButtonAttribute } from '../model/buttonTypes'
 import { Heroicon } from '../../heroicon/ui/heroicon'
-import React, { JSX } from 'jsx-dom'
-import type { HTMLAttributes } from 'jsx-dom/types'
 import type { defaultState } from '../../../shared/components/model/defaultState'
 
-export function Button (props: HTMLAttributes<HTMLButtonElement> & ButtonAttribute & defaultState): JSX.Element {
+export function Button(props: HTMLAttributes<HTMLButtonElement> & ButtonAttribute & defaultState): JSX.Element {
   const { iconSrc, iconName, label, description, primary } = props
 
   return (
