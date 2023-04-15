@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"prepare": "husky install",
-		"lint": "pnpm --filter . lint"
+		"lint": "pnpm --filter * lint"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.9",

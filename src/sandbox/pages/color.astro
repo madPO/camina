@@ -1,11 +1,12 @@
 ﻿---
 import DocsLayout from '../widgets/docs/ui/DocsLayout.astro'
-import { getContrast, reference } from '../shared/color'
-import { formatRgb, filterContrast } from 'culori'
+import { reference, gradient } from '../shared/color'
+import { formatRgb, filterContrast, formatRgb, formatCss  } from 'culori'
 
+const test = gradient('rgb(34, 22, 0)', 'dark', 'brand');
 ---
 <script>
-    import '../shared/color'
+
 </script>
 <style type="text/css">
 .color-example {
@@ -21,10 +22,10 @@ import { formatRgb, filterContrast } from 'culori'
 <DocsLayout title="Начало работы">
 <div class="color-example">
     <ul class="color-reference">
-        {Object.keys(reference.light.gray).map(k => <li class="color-palette"><div style={ `background-color: ${formatRgb(reference.light.gray[k])}` }></div> gray-{k}</li>)}
+        {Object.keys(reference.dark.brand).map(k => <li class="color-palette"><div style={`background-color: ${formatRgb(reference.dark.brand[k])}`}></div> {k}</li>)}
     </ul> 
-    <ul class="color-test">
-        {Object.entries(getContrast().light.gray).map(([k, v]) => <li class="color-palette"><div style={ `background-color: ${formatRgb(filterContrast(v, 'hsl')(reference.light.gray['100']))}` }></div> {v}</li>)}
-    </ul>    
+    <ul class="color-reference">
+        {Object.keys(test).map(k => <li class="color-palette"><div style={`background-color: ${formatRgb (test[k])}`}></div> {formatCss(test[k])}</li>)}
+    </ul> 
 </div>
 </DocsLayout>

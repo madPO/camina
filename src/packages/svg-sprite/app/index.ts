@@ -12,12 +12,12 @@ export interface SvgSpriteEntry {
   except?: string[]
 }
 
-export interface SvgSpriteOptions {    
-    entry: { 
-        [id: string]: SvgSpriteEntry,
-    },
-    
-    optimisation?: Config & { disable: boolean },
+export interface SvgSpriteOptions {
+  entry: {
+    [id: string]: SvgSpriteEntry
+  }
+
+  optimisation?: Config & { disable: boolean }
 }
 
 function mapEntry(entryName: string, entry: SvgSpriteEntry): Promise<{ asset: EmittedAsset; files: string[] }> {

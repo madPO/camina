@@ -11,7 +11,7 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       entry: ['app/index.ts'],
-      formats: ['cjs', 'es'],
+      formats: ['cjs', 'es', 'umd'],
     },
     rollupOptions: {
       output: {
@@ -27,7 +27,7 @@ export default defineConfig({
             return '@camina-core/utils'
 
           const widgetName = matches[1]
-          return `@camina-core/${widgetName}`
+          return `components/${widgetName}`
         },
       },
     },
