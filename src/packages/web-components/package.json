@@ -12,6 +12,10 @@
     ".": {
       "require": "./dist/@camina-web-components.umd.js",
       "import": "./dist/@camina-web-components.js"
+    },
+    "./style/components.css": {
+      "require": "./dist/style.css",
+      "import": "./dist/style.css"
     }
   },
   "main": "./dist/@camina-web-components.umd.js",
