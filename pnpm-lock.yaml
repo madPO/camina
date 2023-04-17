@@ -51,6 +51,12 @@ importers:
       lint-staged:
         specifier: 13.2.1
         version: 13.2.1
+      postcss-nested:
+        specifier: ^6.0.1
+        version: 6.0.1(postcss@8.4.21)
+      postcss-nesting:
+        specifier: ^11.2.2
+        version: 11.2.2(postcss@8.4.21)
       vite:
         specifier: 4.2.1
         version: 4.2.1(@types/node@17.0.9)
@@ -867,7 +873,6 @@ packages:
       postcss-selector-parser: ^6.0.10
     dependencies:
       postcss-selector-parser: 6.0.11
-    dev: false
 
   /@emmetio/abbreviation@2.3.1:
     resolution: {integrity: sha512-QXgYlXZGprqb6aCBJPPWVBN/Jb69khJF73GGJkOk//PoMgSbPGuaHn1hCRolctnzlBHjCIC6Om97Pw46/1A23g==}
@@ -5238,6 +5243,16 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
+  /postcss-nested@6.0.1(postcss@8.4.21):
+    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+    dev: true
+
   /postcss-nesting@11.2.2(postcss@8.4.21):
     resolution: {integrity: sha512-aOTiUniAB1bcPE6GGiynWRa6PZFPhOTAm5q3q5cem6QeSijIHHkWr6gs65ukCZMXeak8yXeZVbBJET3VM+HlhA==}
     engines: {node: ^14 || ^16 || >=18}
@@ -5247,7 +5262,6 @@ packages:
       '@csstools/selector-specificity': 2.2.0(postcss-selector-parser@6.0.11)
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
-    dev: false
 
   /postcss-normalize-charset@5.1.0(postcss@8.4.21):
     resolution: {integrity: sha512-mSgUJ+pd/ldRGVx26p2wz9dNZ7ji6Pn8VWBajMXFf8jk7vUoSrZ2lt/wZR7DtlZYKesmZI680qjr2CeFF2fbUg==}

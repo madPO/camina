@@ -11,7 +11,7 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       entry: ['app/index.ts'],
-      formats: ['cjs', 'es', 'umd'],
+      formats: ['cjs', 'es'],
     },
     rollupOptions: {
       output: {
