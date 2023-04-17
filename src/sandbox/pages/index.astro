@@ -1,5 +1,6 @@
 ---
 import '../app/general.css'
+import '@camina/web-components/style/components.css';
 ---
 <html lang="ru">
 	<head>
@@ -7,14 +8,14 @@ import '../app/general.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<title>camina</title>
-		<style>  
+		<style>
 		    .landing-page {
 		        background-color: var(--nero-50);
 		        height: 100vh;
 		        display: flex;
                 flex-direction: column;
 		    }
-		    
+
 		    .landing-content {
 		        height: 100%;
 		        display: flex;
@@ -22,9 +23,9 @@ import '../app/general.css'
                 justify-content: center;
                 align-items: center;
             }
-		    
+
 		    .landing-button {
-		        outline: transparent;
+		            outline: transparent;
                 font-size: 0.88em;
                 font-weight: 400;
                 border: none;
@@ -39,39 +40,36 @@ import '../app/general.css'
                 background-color: transparent;
                 color: var(--sand-900);
 		    }
-		    
+
 		    .landing-button:hover {
 		        background-color: var(--nero-75);
 		    }
-		    
+
 		    .landing-navigation {
 		        display: flex;
 		        flex-direction: row;
 		        padding: 2em;
 		    }
-		    
+
 		    .landing-navigation__item {
 		        list-style: none;
+		        padding: 0 2em;
 		    }
-		    
-		    .landing-navigation__item .landing-button {
-		        color: var(--sand-900);
-		    }	
-		    
+
 		    .landing-header {
 		        font-size: 7em;
-                color: var(--orange-900); 
-		    }		  	
+                color: var(--orange-900);
+		    }
 		</style>
 	</head>
 	<body class="landing-page">
 	    <nav class="landing-navigation">
-	        <li class="landing-navigation__item"><a class="landing-button" href="/docs">Документация</a></li>    
-	        <li class="landing-navigation__item"><a class="landing-button" href="https://github.com/madpo/camina">GitHub</a></li>    
+	        <li class="landing-navigation__item"><a class="camina-text" href="/docs">Документация</a></li>
+	        <li class="landing-navigation__item"><a class="camina-text" href="https://github.com/madpo/camina">GitHub</a></li>
 	    </nav>
 	    <div class="landing-content">
-	        <h1 class="landing-header">camina</h1>
-	        <a class="landing-button get-started" href="/docs">Начало работы</a>
-	    </div>	  
+	        <h1 class="camina-text camina-text-heading camina-text-heading-xxxl">camina</h1>
+	        <a class="camina-text" href="/docs">Начало работы</a>
+	    </div>
 	</body>
 </html>

@@ -1,7 +1,9 @@
-﻿---                          
+﻿---
 const { title } = Astro.props;
 import './GeneralLayout.css'
 import '../../../app/general.css'
+
+import '@camina/web-components/style/components.css';
 ---
 <html lang="ru">
 	<head>
@@ -10,10 +12,10 @@ import '../../../app/general.css'
 		<meta name="viewport" content="width=device-width" />
 		<title>{title} | camina</title>
 		<script>
-            import "@camina/web-components"
-        </script>
+            import "@camina/web-components";
+    </script>
 	</head>
 	<body class="camina-page">
-	    <slot />    	  
+	    <slot />
 	</body>
 </html>

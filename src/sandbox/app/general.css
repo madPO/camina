@@ -7,9 +7,9 @@
 }
 
 :root {
-/*    nero:       #161616 
+/*    nero:       #161616
     emerald:    #346751
-    orange:     #C84B31 
+    orange:     #C84B31
     sand:       #ECDBBA */
 
     --nero-50: oklch(0.11380754615294464% 0 0);
@@ -37,7 +37,7 @@
     --emerald-1100: oklch(1.0345540496699948 0.06639200753460127 163.86839225792303);
     --emerald-1200: oklch(1.0804663257009341 0.06639200753460127 163.86839225792303);
     --emerald-1300: oklch(1.1224896679211092 0.06639200753460127 163.86839225792303);
-    
+
     --orange-100: oklch(0.6270438708470972 0.16470601574762447 33.504302783436955);
     --orange-200: oklch(0.6650311144802357 0.16470601574762447 33.504302783436955);
     --orange-300: oklch(0.7143404802034137 0.16470601574762447 33.504302783436955);
@@ -67,10 +67,21 @@
     --sand-13000: oklch(0.8613726732796037 0.04326869819368515 82.45271781588256);
 
     font-size: 36px;
-    /* 1em = 16px  
+    /* 1em = 16px
    font-size: 16px; */
+
+  --camina-color-background-100: var(--orange-100);
+  --camina-color-background-200: var(--orange-200);
+  --camina-color-background-300: var(--orange-300);
+  --camina-color-background-400: var(--orange-400);
+  --camina-color-background-500: var(--orange-500);
+  --camina-color-background-600: var(--orange-600);
+  --camina-color-background-700: var(--orange-700);
+  --camina-color-background-800: var(--orange-800);
+  --camina-color-background-900: var(--orange-900);
 }
 
 * {
     font-family: 'JetBrains Mono', monospace;
+    --camina-font-face: 'JetBrains Mono', monospace;
 }
