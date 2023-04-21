@@ -10,7 +10,14 @@
       "title": "Иконки",
       "name": "heroicon",
       "path": "heroicon.md",
-      "label": "Действия"
+      "label": "Иконки"
+    },
+
+    {
+      "title": "Типография",
+      "name": "typography",
+      "path": "typography.md",
+      "label": "Типография"
     }
   ]
 }
